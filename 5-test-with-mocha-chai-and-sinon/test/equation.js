@@ -8,7 +8,7 @@ var stub;
 
 describe('discriminant', function() {
     before(function() {
-        stub = sinon.stub(math, 'square').returns(25);
+        stub = sinon.stub(math, 'square').returns(4);
     });
 
     after(function () {
@@ -16,6 +16,7 @@ describe('discriminant', function() {
     });
 
     it('should return the discriminant', function() {
-        equation.discriminant(3, 4, 1).should.equal(13);
+        equation.discriminant(3, 2, -5).should.equal(64);
+        equation.discriminant(3, 11, 7).should.equal(-80);
     });
 });
